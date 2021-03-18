@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BD_KURSACH_ModelContainer" CdmEntityContainer="BD_KURSACH_Entities">
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataClient">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.DataClient">
+        <MappingFragment StoreEntitySet="DataClient">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Bodytype" ColumnName="Bodytype" />
+          <ScalarProperty Name="Progress" ColumnName="Progress" />
+          <ScalarProperty Name="Exercises" ColumnName="Exercises" />
+          <ScalarProperty Name="Dish" ColumnName="Dish" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataTrainer">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.DataTrainer">
+        <MappingFragment StoreEntitySet="DataTrainer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="BarbellSquat" ColumnName="BarbellSquat" />
+          <ScalarProperty Name="Deadlift" ColumnName="Deadlift" />
+          <ScalarProperty Name="BenchPress" ColumnName="BenchPress" />
+          <ScalarProperty Name="Pullups" ColumnName="Pullups" />
+          <ScalarProperty Name="BodyType" ColumnName="BodyType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dishes">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.Dishes">
+        <MappingFragment StoreEntitySet="Dishes">
+          <ScalarProperty Name="Dish" ColumnName="Dish" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exercises">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.Exercises">
+        <MappingFragment StoreEntitySet="Exercises">
+          <ScalarProperty Name="Exercises1" ColumnName="Exercises" />
+          <ScalarProperty Name="MuscleGroups" ColumnName="MuscleGroups" />
+          <ScalarProperty Name="Priorety" ColumnName="Priorety" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ScalarProperty Name="Fats" ColumnName="Fats" />
+          <ScalarProperty Name="Carbohydrates" ColumnName="Carbohydrates" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainer">
+      <EntityTypeMapping TypeName="BD_KURSACH_Model.Trainer">
+        <MappingFragment StoreEntitySet="Trainer">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище BD_KURSACH_Model.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище BD_KURSACH_Model.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище BD_KURSACH_Model.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище BD_KURSACH_Model.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_KURSACH_Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище BD_KURSACH_Model.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_KURSACH_Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище BD_KURSACH_Model.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище BD_KURSACH_Model.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_KURSACH_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SecondName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DataClient" Relationship="Self.FK_DataClient_Client" FromRole="Client" ToRole="DataClient" />
+  </EntityType>
+  <EntityType Name="DataClient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Bodytype" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Progress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Exercises" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Dish" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_DataClient_Client" FromRole="DataClient" ToRole="Client" />
+    <NavigationProperty Name="Dishes" Relationship="Self.FK_DataClient_Dishes" FromRole="DataClient" ToRole="Dishes" />
+    <NavigationProperty Name="Exercises1" Relationship="Self.FK_DataClient_Exercises" FromRole="DataClient" ToRole="Exercises" />
+  </EntityType>
+  <EntityType Name="DataTrainer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="BarbellSquat" Type="Int32" />
+    <Property Name="Deadlift" Type="Int32" />
+    <Property Name="BenchPress" Type="Int32" />
+    <Property Name="Pullups" Type="Int32" />
+    <Property Name="BodyType" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Trainer" Relationship="Self.FK_DataTrainer_Trainer" FromRole="DataTrainer" ToRole="Trainer" />
+  </EntityType>
+  <EntityType Name="Dishes">
+    <Key>
+      <PropertyRef Name="Dish" />
+    </Key>
+    <Property Name="Dish" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Product" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DataClient" Relationship="Self.FK_DataClient_Dishes" FromRole="Dishes" ToRole="DataClient" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Dishes_Products" FromRole="Dishes" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Exercises">
+    <Key>
+      <PropertyRef Name="Exercises1" />
+    </Key>
+    <Property Name="Exercises1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MuscleGroups" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Priorety" Type="Int32" />
+    <NavigationProperty Name="DataClient" Relationship="Self.FK_DataClient_Exercises" FromRole="Exercises" ToRole="DataClient" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Product" />
+    </Key>
+    <Property Name="Product" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Protein" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Fats" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Carbohydrates" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Calories" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Dishes" Relationship="Self.FK_Dishes_Products" FromRole="Products" ToRole="Dishes" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SecondName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DataTrainer" Relationship="Self.FK_DataTrainer_Trainer" FromRole="Trainer" ToRole="DataTrainer" />
+  </EntityType>
+  <Association Name="FK_DataClient_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="DataClient" Type="Self.DataClient" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DataClient">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataClient_Dishes">
+    <End Role="Dishes" Type="Self.Dishes" Multiplicity="0..1" />
+    <End Role="DataClient" Type="Self.DataClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dishes">
+        <PropertyRef Name="Dish" />
+      </Principal>
+      <Dependent Role="DataClient">
+        <PropertyRef Name="Dish" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataClient_Exercises">
+    <End Role="Exercises" Type="Self.Exercises" Multiplicity="0..1" />
+    <End Role="DataClient" Type="Self.DataClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exercises">
+        <PropertyRef Name="Exercises1" />
+      </Principal>
+      <Dependent Role="DataClient">
+        <PropertyRef Name="Exercises" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataTrainer_Trainer">
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="1" />
+    <End Role="DataTrainer" Type="Self.DataTrainer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DataTrainer">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dishes_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="Dishes" Type="Self.Dishes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Product" />
+      </Principal>
+      <Dependent Role="Dishes">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_KURSACH_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Client" EntityType="Self.Client" />
+    <EntitySet Name="DataClient" EntityType="Self.DataClient" />
+    <EntitySet Name="DataTrainer" EntityType="Self.DataTrainer" />
+    <EntitySet Name="Dishes" EntityType="Self.Dishes" />
+    <EntitySet Name="Exercises" EntityType="Self.Exercises" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Trainer" EntityType="Self.Trainer" />
+    <AssociationSet Name="FK_DataClient_Client" Association="Self.FK_DataClient_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="DataClient" EntitySet="DataClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataClient_Dishes" Association="Self.FK_DataClient_Dishes">
+      <End Role="Dishes" EntitySet="Dishes" />
+      <End Role="DataClient" EntitySet="DataClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataClient_Exercises" Association="Self.FK_DataClient_Exercises">
+      <End Role="Exercises" EntitySet="Exercises" />
+      <End Role="DataClient" EntitySet="DataClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataTrainer_Trainer" Association="Self.FK_DataTrainer_Trainer">
+      <End Role="Trainer" EntitySet="Trainer" />
+      <End Role="DataTrainer" EntitySet="DataTrainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dishes_Products" Association="Self.FK_Dishes_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Dishes" EntitySet="Dishes" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BD_KURSACH_Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BD_KURSACH_Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

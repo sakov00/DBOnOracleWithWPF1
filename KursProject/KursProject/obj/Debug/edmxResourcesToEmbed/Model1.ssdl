@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Model" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENT">
+    <Key>
+      <PropertyRef Name="ID_CLIENT" />
+    </Key>
+    <Property Name="FIRSTNAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="SECONDNAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="LOGIN" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="ID_CLIENT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NUMBER_GROUP" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="DATACLIENT">
+    <Key>
+      <PropertyRef Name="ID_DATACLIENT" />
+    </Key>
+    <Property Name="ID_DATACLIENT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_CLIENT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="WEIGHT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="HEIGHT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BODYTYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="PROGRESS_WEIGHT" Type="float" Precision="126" Scale="0" />
+    <Property Name="PROGRESS_POWER" Type="float" Precision="126" Scale="0" />
+    <Property Name="DATETIME" Type="date" />
+  </EntityType>
+  <EntityType Name="DATATRAINER">
+    <Key>
+      <PropertyRef Name="ID_TRAINER" />
+    </Key>
+    <Property Name="ID_TRAINER" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="WEIGHT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="HEIGHT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BARBELLSQUAT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DEADLIFT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BENCHPRESS" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PULLUPS" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="BODYTYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXERCISES">
+    <Key>
+      <PropertyRef Name="EXERCISES" />
+    </Key>
+    <Property Name="EXERCISES" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="MUSCLEGROUPS" Type="varchar2" MaxLength="20" />
+    <Property Name="PRIORETY" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EXERCISESFORCLIENT">
+    <Key>
+      <PropertyRef Name="ID_EXERCISES" />
+    </Key>
+    <Property Name="ID_CLIENT" Type="number" Precision="38" Scale="0" />
+    <Property Name="ID_EXERCISES" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EXERCISES" Type="varchar2" MaxLength="100" />
+    <Property Name="MUSCLEGROUPS" Type="varchar2" MaxLength="50" />
+    <Property Name="DAYFOREXERCISE" Type="varchar2" MaxLength="50" />
+    <Property Name="PRIORETY" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="GROUPFORCLIENT">
+    <Key>
+      <PropertyRef Name="NUMBER_GROUP" />
+    </Key>
+    <Property Name="NUMBER_GROUP" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_TRAINER" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MESSAGES">
+    <Key>
+      <PropertyRef Name="ID_MESSAGE" />
+    </Key>
+    <Property Name="MESSAGES" Type="varchar2" MaxLength="300" Nullable="false" />
+    <Property Name="ID_MESSAGE" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="WHO_SENDER" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="WHO_RECIPIENT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="GROUPMESSAGE" Type="number" Precision="38" Scale="0" />
+    <Property Name="DATETIME" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESULTEXERCISES">
+    <Key>
+      <PropertyRef Name="ID_EXERCISES" />
+    </Key>
+    <Property Name="NUMBERWORKOUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_EXERCISES" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EXERCISES" Type="varchar2" MaxLength="100" />
+    <Property Name="WEIGHT_FOR_EXERCISES" Type="number" Precision="38" Scale="0" />
+    <Property Name="QQUANTITY" Type="number" Precision="38" Scale="0" />
+    <Property Name="DAYFOREXERCISE" Type="varchar2" MaxLength="50" />
+    <Property Name="MUSCLEGROUPS" Type="varchar2" MaxLength="50" />
+    <Property Name="PRIORETY" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="TRAINER">
+    <Key>
+      <PropertyRef Name="ID_TRAINER" />
+    </Key>
+    <Property Name="FIRSTNAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="SECONDNAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="ID_TRAINER" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="LOGIN" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="NUMBER_GROUP" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="WORKOUT">
+    <Key>
+      <PropertyRef Name="NUMBERWORKOUT" />
+    </Key>
+    <Property Name="NUMBERWORKOUT" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_DATACLIENT" Type="number" Precision="38" Scale="0" />
+    <Property Name="PULSE" Type="number" Precision="38" Scale="0" />
+    <Property Name="DIFFICULTY_WORKOUT" Type="varchar2" MaxLength="100" />
+    <Property Name="INTENSITY" Type="varchar2" MaxLength="100" />
+    <Property Name="COUNTEXERCISES" Type="number" Precision="38" Scale="0" />
+    <Property Name="DATETIME" Type="date" />
+  </EntityType>
+  <Association Name="FK_CLIENT_GROUP1">
+    <End Role="GROUPFORCLIENT" Type="Self.GROUPFORCLIENT" Multiplicity="0..1" />
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GROUPFORCLIENT">
+        <PropertyRef Name="NUMBER_GROUP" />
+      </Principal>
+      <Dependent Role="CLIENT">
+        <PropertyRef Name="NUMBER_GROUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DATACLIENT_CLIENT">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="DATACLIENT" Type="Self.DATACLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Principal>
+      <Dependent Role="DATACLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DATATRAINER_TRAINER">
+    <End Role="TRAINER" Type="Self.TRAINER" Multiplicity="1" />
+    <End Role="DATATRAINER" Type="Self.DATATRAINER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TRAINER">
+        <PropertyRef Name="ID_TRAINER" />
+      </Principal>
+      <Dependent Role="DATATRAINER">
+        <PropertyRef Name="ID_TRAINER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXFORCLIENT_WORKOUT1">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="0..1" />
+    <End Role="EXERCISESFORCLIENT" Type="Self.EXERCISESFORCLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Principal>
+      <Dependent Role="EXERCISESFORCLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULTEX_EXFORWORKOUT">
+    <End Role="WORKOUT" Type="Self.WORKOUT" Multiplicity="1" />
+    <End Role="RESULTEXERCISES" Type="Self.RESULTEXERCISES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WORKOUT">
+        <PropertyRef Name="NUMBERWORKOUT" />
+      </Principal>
+      <Dependent Role="RESULTEXERCISES">
+        <PropertyRef Name="NUMBERWORKOUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRAINER_GROUP">
+    <End Role="GROUPFORCLIENT" Type="Self.GROUPFORCLIENT" Multiplicity="0..1" />
+    <End Role="TRAINER" Type="Self.TRAINER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GROUPFORCLIENT">
+        <PropertyRef Name="NUMBER_GROUP" />
+      </Principal>
+      <Dependent Role="TRAINER">
+        <PropertyRef Name="NUMBER_GROUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WORKOUTEX_EXFORCLIENT">
+    <End Role="DATACLIENT" Type="Self.DATACLIENT" Multiplicity="0..1" />
+    <End Role="WORKOUT" Type="Self.WORKOUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DATACLIENT">
+        <PropertyRef Name="ID_DATACLIENT" />
+      </Principal>
+      <Dependent Role="WORKOUT">
+        <PropertyRef Name="ID_DATACLIENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ModelContainer">
+    <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="DATACLIENT" EntityType="Self.DATACLIENT" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="DATATRAINER" EntityType="Self.DATATRAINER" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="EXERCISES" EntityType="Self.EXERCISES" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="EXERCISESFORCLIENT" EntityType="Self.EXERCISESFORCLIENT" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="GROUPFORCLIENT" EntityType="Self.GROUPFORCLIENT" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="MESSAGES" EntityType="Self.MESSAGES" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="RESULTEXERCISES" EntityType="Self.RESULTEXERCISES" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="TRAINER" EntityType="Self.TRAINER" Schema="BOSS" store:Type="Tables" />
+    <EntitySet Name="WORKOUT" EntityType="Self.WORKOUT" Schema="BOSS" store:Type="Tables" />
+    <AssociationSet Name="FK_CLIENT_GROUP1" Association="Self.FK_CLIENT_GROUP1">
+      <End Role="GROUPFORCLIENT" EntitySet="GROUPFORCLIENT" />
+      <End Role="CLIENT" EntitySet="CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DATACLIENT_CLIENT" Association="Self.FK_DATACLIENT_CLIENT">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="DATACLIENT" EntitySet="DATACLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DATATRAINER_TRAINER" Association="Self.FK_DATATRAINER_TRAINER">
+      <End Role="TRAINER" EntitySet="TRAINER" />
+      <End Role="DATATRAINER" EntitySet="DATATRAINER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXFORCLIENT_WORKOUT1" Association="Self.FK_EXFORCLIENT_WORKOUT1">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="EXERCISESFORCLIENT" EntitySet="EXERCISESFORCLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULTEX_EXFORWORKOUT" Association="Self.FK_RESULTEX_EXFORWORKOUT">
+      <End Role="WORKOUT" EntitySet="WORKOUT" />
+      <End Role="RESULTEXERCISES" EntitySet="RESULTEXERCISES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRAINER_GROUP" Association="Self.FK_TRAINER_GROUP">
+      <End Role="GROUPFORCLIENT" EntitySet="GROUPFORCLIENT" />
+      <End Role="TRAINER" EntitySet="TRAINER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WORKOUTEX_EXFORCLIENT" Association="Self.FK_WORKOUTEX_EXFORCLIENT">
+      <End Role="DATACLIENT" EntitySet="DATACLIENT" />
+      <End Role="WORKOUT" EntitySet="WORKOUT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

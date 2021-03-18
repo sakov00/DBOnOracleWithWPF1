@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BD_KURSACH_Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="FirstName" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="SecondName" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Login" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataClient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Bodytype" Type="nchar" MaxLength="20" />
+    <Property Name="Progress" Type="nchar" MaxLength="10" />
+    <Property Name="Exercises" Type="nchar" MaxLength="10" />
+    <Property Name="Dish" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DataTrainer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Weight" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="BarbellSquat" Type="int" />
+    <Property Name="Deadlift" Type="int" />
+    <Property Name="BenchPress" Type="int" />
+    <Property Name="Pullups" Type="int" />
+    <Property Name="BodyType" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Dishes">
+    <Key>
+      <PropertyRef Name="Dish" />
+    </Key>
+    <Property Name="Dish" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Product" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Exercises">
+    <Key>
+      <PropertyRef Name="Exercises" />
+    </Key>
+    <Property Name="Exercises" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MuscleGroups" Type="nchar" MaxLength="10" />
+    <Property Name="Priorety" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Product" />
+    </Key>
+    <Property Name="Product" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Protein" Type="nchar" MaxLength="10" />
+    <Property Name="Fats" Type="nchar" MaxLength="10" />
+    <Property Name="Carbohydrates" Type="nchar" MaxLength="10" />
+    <Property Name="Calories" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="FirstName" Type="nchar" MaxLength="10" />
+    <Property Name="SecondName" Type="nchar" MaxLength="10" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="20" />
+    <Property Name="Login" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_DataClient_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="DataClient" Type="Self.DataClient" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DataClient">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataClient_Dishes">
+    <End Role="Dishes" Type="Self.Dishes" Multiplicity="0..1" />
+    <End Role="DataClient" Type="Self.DataClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dishes">
+        <PropertyRef Name="Dish" />
+      </Principal>
+      <Dependent Role="DataClient">
+        <PropertyRef Name="Dish" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataClient_Exercises">
+    <End Role="Exercises" Type="Self.Exercises" Multiplicity="0..1" />
+    <End Role="DataClient" Type="Self.DataClient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exercises">
+        <PropertyRef Name="Exercises" />
+      </Principal>
+      <Dependent Role="DataClient">
+        <PropertyRef Name="Exercises" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DataTrainer_Trainer">
+    <End Role="Trainer" Type="Self.Trainer" Multiplicity="1" />
+    <End Role="DataTrainer" Type="Self.DataTrainer" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DataTrainer">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dishes_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="Dishes" Type="Self.Dishes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Product" />
+      </Principal>
+      <Dependent Role="Dishes">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Хранилище BD_KURSACH_ModelContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataClient" EntityType="Self.DataClient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataTrainer" EntityType="Self.DataTrainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dishes" EntityType="Self.Dishes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exercises" EntityType="Self.Exercises" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainer" EntityType="Self.Trainer" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DataClient_Client" Association="Self.FK_DataClient_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="DataClient" EntitySet="DataClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataClient_Dishes" Association="Self.FK_DataClient_Dishes">
+      <End Role="Dishes" EntitySet="Dishes" />
+      <End Role="DataClient" EntitySet="DataClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataClient_Exercises" Association="Self.FK_DataClient_Exercises">
+      <End Role="Exercises" EntitySet="Exercises" />
+      <End Role="DataClient" EntitySet="DataClient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DataTrainer_Trainer" Association="Self.FK_DataTrainer_Trainer">
+      <End Role="Trainer" EntitySet="Trainer" />
+      <End Role="DataTrainer" EntitySet="DataTrainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dishes_Products" Association="Self.FK_Dishes_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Dishes" EntitySet="Dishes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

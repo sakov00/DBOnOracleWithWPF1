@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CLIENT">
+      <EntityTypeMapping TypeName="Model.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="SECONDNAME" ColumnName="SECONDNAME" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="NUMBER_GROUP" ColumnName="NUMBER_GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATACLIENT">
+      <EntityTypeMapping TypeName="Model.DATACLIENT">
+        <MappingFragment StoreEntitySet="DATACLIENT">
+          <ScalarProperty Name="ID_DATACLIENT" ColumnName="ID_DATACLIENT" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="BODYTYPE" ColumnName="BODYTYPE" />
+          <ScalarProperty Name="PROGRESS_WEIGHT" ColumnName="PROGRESS_WEIGHT" />
+          <ScalarProperty Name="PROGRESS_POWER" ColumnName="PROGRESS_POWER" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATATRAINER">
+      <EntityTypeMapping TypeName="Model.DATATRAINER">
+        <MappingFragment StoreEntitySet="DATATRAINER">
+          <ScalarProperty Name="ID_TRAINER" ColumnName="ID_TRAINER" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="BARBELLSQUAT" ColumnName="BARBELLSQUAT" />
+          <ScalarProperty Name="DEADLIFT" ColumnName="DEADLIFT" />
+          <ScalarProperty Name="BENCHPRESS" ColumnName="BENCHPRESS" />
+          <ScalarProperty Name="PULLUPS" ColumnName="PULLUPS" />
+          <ScalarProperty Name="BODYTYPE" ColumnName="BODYTYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXERCISES">
+      <EntityTypeMapping TypeName="Model.EXERCISES">
+        <MappingFragment StoreEntitySet="EXERCISES">
+          <ScalarProperty Name="EXERCISES1" ColumnName="EXERCISES" />
+          <ScalarProperty Name="MUSCLEGROUPS" ColumnName="MUSCLEGROUPS" />
+          <ScalarProperty Name="PRIORETY" ColumnName="PRIORETY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXERCISESFORCLIENT">
+      <EntityTypeMapping TypeName="Model.EXERCISESFORCLIENT">
+        <MappingFragment StoreEntitySet="EXERCISESFORCLIENT">
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="ID_EXERCISES" ColumnName="ID_EXERCISES" />
+          <ScalarProperty Name="EXERCISES" ColumnName="EXERCISES" />
+          <ScalarProperty Name="MUSCLEGROUPS" ColumnName="MUSCLEGROUPS" />
+          <ScalarProperty Name="DAYFOREXERCISE" ColumnName="DAYFOREXERCISE" />
+          <ScalarProperty Name="PRIORETY" ColumnName="PRIORETY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GROUPFORCLIENT">
+      <EntityTypeMapping TypeName="Model.GROUPFORCLIENT">
+        <MappingFragment StoreEntitySet="GROUPFORCLIENT">
+          <ScalarProperty Name="NUMBER_GROUP" ColumnName="NUMBER_GROUP" />
+          <ScalarProperty Name="ID_TRAINER" ColumnName="ID_TRAINER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MESSAGES">
+      <EntityTypeMapping TypeName="Model.MESSAGES">
+        <MappingFragment StoreEntitySet="MESSAGES">
+          <ScalarProperty Name="MESSAGES1" ColumnName="MESSAGES" />
+          <ScalarProperty Name="ID_MESSAGE" ColumnName="ID_MESSAGE" />
+          <ScalarProperty Name="WHO_SENDER" ColumnName="WHO_SENDER" />
+          <ScalarProperty Name="WHO_RECIPIENT" ColumnName="WHO_RECIPIENT" />
+          <ScalarProperty Name="GROUPMESSAGE" ColumnName="GROUPMESSAGE" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULTEXERCISES">
+      <EntityTypeMapping TypeName="Model.RESULTEXERCISES">
+        <MappingFragment StoreEntitySet="RESULTEXERCISES">
+          <ScalarProperty Name="NUMBERWORKOUT" ColumnName="NUMBERWORKOUT" />
+          <ScalarProperty Name="ID_EXERCISES" ColumnName="ID_EXERCISES" />
+          <ScalarProperty Name="EXERCISES" ColumnName="EXERCISES" />
+          <ScalarProperty Name="WEIGHT_FOR_EXERCISES" ColumnName="WEIGHT_FOR_EXERCISES" />
+          <ScalarProperty Name="QQUANTITY" ColumnName="QQUANTITY" />
+          <ScalarProperty Name="DAYFOREXERCISE" ColumnName="DAYFOREXERCISE" />
+          <ScalarProperty Name="MUSCLEGROUPS" ColumnName="MUSCLEGROUPS" />
+          <ScalarProperty Name="PRIORETY" ColumnName="PRIORETY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRAINER">
+      <EntityTypeMapping TypeName="Model.TRAINER">
+        <MappingFragment StoreEntitySet="TRAINER">
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="SECONDNAME" ColumnName="SECONDNAME" />
+          <ScalarProperty Name="ID_TRAINER" ColumnName="ID_TRAINER" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="NUMBER_GROUP" ColumnName="NUMBER_GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORKOUT">
+      <EntityTypeMapping TypeName="Model.WORKOUT">
+        <MappingFragment StoreEntitySet="WORKOUT">
+          <ScalarProperty Name="NUMBERWORKOUT" ColumnName="NUMBERWORKOUT" />
+          <ScalarProperty Name="ID_DATACLIENT" ColumnName="ID_DATACLIENT" />
+          <ScalarProperty Name="PULSE" ColumnName="PULSE" />
+          <ScalarProperty Name="DIFFICULTY_WORKOUT" ColumnName="DIFFICULTY_WORKOUT" />
+          <ScalarProperty Name="INTENSITY" ColumnName="INTENSITY" />
+          <ScalarProperty Name="COUNTEXERCISES" ColumnName="COUNTEXERCISES" />
+          <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
