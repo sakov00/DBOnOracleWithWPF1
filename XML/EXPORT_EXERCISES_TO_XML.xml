@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<exercises>
+ <columns>
+  <EXERCISES>&quot;Полувер&quot; в кроссовере</EXERCISES>
+  <MUSCLEGROUPS>Верхняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Армейский жим</EXERCISES>
+  <MUSCLEGROUPS>Плечи</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Гиперэкстензия</EXERCISES>
+  <MUSCLEGROUPS>Нижняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Жим Арнольда</EXERCISES>
+  <MUSCLEGROUPS>Плечи</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Жим гантелей лежа</EXERCISES>
+  <MUSCLEGROUPS>Грудь</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Жим гантелей сидя</EXERCISES>
+  <MUSCLEGROUPS>Плечи</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Жим сидя в рычажном тренажере</EXERCISES>
+  <MUSCLEGROUPS>Грудь</MUSCLEGROUPS>
+  <PRIORETY>3</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Жим штанги лёжа</EXERCISES>
+  <MUSCLEGROUPS>Грудь</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Зашагивания на скамью</EXERCISES>
+  <MUSCLEGROUPS>Бёдра</MUSCLEGROUPS>
+  <PRIORETY>3</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Косые скручивания на полу</EXERCISES>
+  <MUSCLEGROUPS>Пресс</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Отведение гантелей через стороны стоя</EXERCISES>
+  <MUSCLEGROUPS>Плечи</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Отведение руки с гантелей в наклоне</EXERCISES>
+  <MUSCLEGROUPS>Трицепс</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Отжимания на брусьях</EXERCISES>
+  <MUSCLEGROUPS>Грудь</MUSCLEGROUPS>
+  <PRIORETY>2</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Отжимания от пола</EXERCISES>
+  <MUSCLEGROUPS>Грудь</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Отжимания спиной к скамье</EXERCISES>
+  <MUSCLEGROUPS>Трицепс</MUSCLEGROUPS>
+  <PRIORETY>3</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Подтягивания обратным хватом</EXERCISES>
+  <MUSCLEGROUPS>Верхняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Подъём на мыски сидя</EXERCISES>
+  <MUSCLEGROUPS>Икры</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Подъем на носки стоя</EXERCISES>
+  <MUSCLEGROUPS>Икры</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Подъем ног в висе</EXERCISES>
+  <MUSCLEGROUPS>Пресс</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Подъем ног в упоре на локти</EXERCISES>
+  <MUSCLEGROUPS>Пресс</MUSCLEGROUPS>
+  <PRIORETY>3</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Приседание со штангой</EXERCISES>
+  <MUSCLEGROUPS>Бёдра</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Разгибание рук в локтевом суставе на блоке стоя</EXERCISES>
+  <MUSCLEGROUPS>Трицепс</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Сведение рук в тренажере</EXERCISES>
+  <MUSCLEGROUPS>Грудь</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Сгибание ног в тренажере лежа</EXERCISES>
+  <MUSCLEGROUPS>Бёдра</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Сгибание ног в тренажёре сидя</EXERCISES>
+  <MUSCLEGROUPS>Бёдра</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Сгибание рук на скамье Скотта</EXERCISES>
+  <MUSCLEGROUPS>Бицепс</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Сгибание рук с гантелями стоя</EXERCISES>
+  <MUSCLEGROUPS>Бицепс</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Сгибание рук со штангой стоя</EXERCISES>
+  <MUSCLEGROUPS>Бицепс</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Скручивания на наклонной скамье</EXERCISES>
+  <MUSCLEGROUPS>Пресс</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Становая тяга классическая</EXERCISES>
+  <MUSCLEGROUPS>Нижняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Тяга верхнего блока к груди</EXERCISES>
+  <MUSCLEGROUPS>Верхняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Тяга гантелей лежа на скамье на животе</EXERCISES>
+  <MUSCLEGROUPS>Верхняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>3</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Тяга т-грифа в наклоне к поясу</EXERCISES>
+  <MUSCLEGROUPS>Верхняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Тяга штанги в наклоне к поясу</EXERCISES>
+  <MUSCLEGROUPS>Верхняя часть спины</MUSCLEGROUPS>
+  <PRIORETY>5</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Тяга штанги к подбородку</EXERCISES>
+  <MUSCLEGROUPS>Плечи</MUSCLEGROUPS>
+  <PRIORETY>3</PRIORETY>
+ </columns>
+ <columns>
+  <EXERCISES>Французский жим с гантелями сидя</EXERCISES>
+  <MUSCLEGROUPS>Трицепс</MUSCLEGROUPS>
+  <PRIORETY>4</PRIORETY>
+ </columns>
+</exercises>
+
