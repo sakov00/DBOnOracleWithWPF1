@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b58591c7341432086789aab86831641" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.CLIENT" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DATACLIENT" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DATATRAINER" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EXERCISES" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EXERCISESFORCLIENT" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GROUPFORCLIENT" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MESSAGES" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RESULTEXERCISES" Width="1.5" PointX="9.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TRAINER" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.WORKOUT" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_CLIENT_GROUP1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DATACLIENT_CLIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_EXFORCLIENT_WORKOUT1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_WORKOUTEX_EXFORCLIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DATATRAINER_TRAINER" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TRAINER_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_RESULTEX_EXFORWORKOUT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

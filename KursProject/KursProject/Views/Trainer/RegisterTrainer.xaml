@@ -1,0 +1,313 @@
+﻿<Window x:Class="KursProject.RegisterTrainer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursProject"
+        xmlns:viewmodels="clr-namespace:KursProject.ViewModels"
+        mc:Ignorable="d"
+        Title="Register" Height="600" Width="600"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <viewmodels:RegisterTrainerViewModel x:Key="RegisterTrainerViewModel"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource RegisterTrainerViewModel}"/>
+    </Window.DataContext>
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+            <GradientStop Color="#FF0000"  Offset="0"/>
+            <GradientStop Color="#DAA520" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="214*"/>
+            <ColumnDefinition Width="229*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Label FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Content="Имя"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="Black"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="120"
+                             HorizontalContentAlignment="Left"
+                             Margin="0,0,31,10" Grid.Row="1"/>
+        <TextBox x:Name="FirstName"
+                             FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Text="{Binding FirstName}"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="Black"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="194"
+                             HorizontalContentAlignment="Left"
+                             Margin="10,10,10,20" Grid.Row="1" Grid.Column="1"/>
+        <Border
+                        Background="Black"
+                        Margin="10,43,1,18" Grid.Row="1" Grid.Column="1"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Фамилия"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="130"
+            HorizontalContentAlignment="Left"
+            Margin="2,0,19,10" Grid.Row="2"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Логин"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="120"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,31,10" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Пароль"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="120"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,31,10" Grid.Row="4"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Вес"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="120"
+            HorizontalContentAlignment="Left"
+            Margin="2,0,29,10" Grid.Row="5"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Рост"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="120"
+            HorizontalContentAlignment="Left"
+            Margin="2,0,29,10" Grid.Row="6"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Телосложение"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="149"
+            HorizontalContentAlignment="Left"
+            Margin="2,0,0,10" Grid.Row="7"/>
+        <TextBox x:Name="SecondName"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding SecondName}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="194"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,10,20" Grid.Row="2" Grid.Column="1"/>
+        <Border
+            Background="Black"
+            Margin="10,43,1,18" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="Login"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding Login}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="194"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,10,26" Grid.Row="3" Grid.Column="1"/>
+        <Border
+            Background="Black"
+            Margin="10,43,1,18" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="Password"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding Password}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="194"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,10,25" Grid.Row="4" Grid.Column="1"/>
+        <Border
+            Background="Black"
+            Margin="10,43,1,18" Grid.Row="4" Grid.Column="1"/>
+        <TextBox x:Name="Weight"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding Weight}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="194"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,10,25" Grid.Row="5" Grid.Column="1"/>
+        <Border
+            Background="Black"
+            Margin="10,43,1,18" Grid.Row="5" Grid.Column="1"/>
+        <TextBox x:Name="Height"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding Height}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="194"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,10,24" Grid.Row="6" Grid.Column="1"/>
+        <Border
+            Background="Black"
+            Margin="10,43,1,18" Grid.Row="6" Grid.Column="1"/>
+        <ComboBox x:Name="BodyType" Margin="8,10,10,16" Grid.Row="7" Text="{Binding BodyType}" Grid.Column="1">
+            <ComboBoxItem Content="Large"/>
+            <ComboBoxItem Content="Average"/>
+            <ComboBoxItem Content="Thin"/>
+        </ComboBox>
+        <Button x:Name="RegisterUsers" Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Margin="63,10,-2,0" Grid.Row="8" Grid.Column="2" Height="45" Background="Transparent" FontSize="20" Command="{Binding Registration_Trainer_Click}" CommandParameter="{Binding SelectedTrainer}"/>
+        <TextBox x:Name="BarbellSquat"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding BarbellSquat}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Width="208"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,11,10" Grid.Row="1" Grid.Column="2"/>
+        <TextBox x:Name="Deadlift"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding Deadlift}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Width="208"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,11,10" Grid.Row="3" Grid.Column="2"/>
+        <TextBox x:Name="BenchPress"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding BenchPress}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Width="208"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,11,10" Grid.Row="5" Grid.Column="2"/>
+        <TextBox x:Name="Pullups"
+            FontFamily="Helvetica"
+            FontWeight="Light"
+            Text="{Binding Pullups}"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Width="208"
+            HorizontalContentAlignment="Left"
+            Margin="10,10,11,10" Grid.Row="7" Grid.Column="2"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Приседание со штангой"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="229"
+            HorizontalContentAlignment="Center"
+            Margin="0,32,0,0" Grid.Column="2"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Становая тяга"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="132"
+            HorizontalContentAlignment="Center"
+            Margin="45,31,52,0" Grid.Column="2" Grid.Row="2"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Жим лёжа"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="132"
+            HorizontalContentAlignment="Center"
+            Margin="45,32,52,0" Grid.Column="2" Grid.Row="4"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Подтягивания"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Width="132"
+            HorizontalContentAlignment="Center"
+            Margin="45,31,52,0" Grid.Column="2" Grid.Row="6"/>
+
+    </Grid>
+</Window>
+

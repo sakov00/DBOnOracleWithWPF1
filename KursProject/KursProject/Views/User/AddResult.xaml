@@ -1,0 +1,563 @@
+﻿<Window x:Class="KursProject.Views.AddResult"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursProject.Views"
+        xmlns:viewmodels="clr-namespace:KursProject.ViewModels"
+        mc:Ignorable="d"
+        Title="AddResult" Height="603.5" Width="735.023">
+    <Window.Resources>
+        <viewmodels:AddResultViewModel x:Key="AddResultViewModel"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource AddResultViewModel}"/>
+    </Window.DataContext>
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+            <GradientStop Color="#FF0000"  Offset="0"/>
+            <GradientStop Color="#DAA520" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="88*"/>
+        </Grid.RowDefinitions>
+
+        <Label FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Content="FirstDay"
+                             FontSize="24"
+                             Foreground="Black"
+                             Background="Transparent"
+                             BorderThickness="0" Margin="0,44,0,0"/>
+        <TextBox x:Name="FirstDay1"
+                             FontSize="20"
+                             Foreground="Red"
+                             Background="Black"
+                             BorderThickness="0"
+                             HorizontalContentAlignment="Left"
+                             Margin="0,0,10,5" Grid.Row="1" Grid.Column="1"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="SecondDay"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="-1,45,0,0" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="ThirdDay"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="6" Margin="0,44,0,0"/>
+        <Button x:Name="button" Content="Добавить результат" Command="{Binding Add_Result_Click}" FontSize="14" Grid.Row="9" Margin="0,33,91,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="FirstDay2"
+
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="1" Grid.Column="2"/>
+        <TextBox x:Name="FirstDay3"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="1" Grid.Column="3"/>
+        <TextBox x:Name="FirstDay4"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="1" Grid.Column="4"/>
+        <TextBox x:Name="FirstDay5"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="1" Grid.Column="5"/>
+        <TextBox x:Name="FirstDay6"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="1" Grid.Column="6"/>
+        <TextBox x:Name="SecondDay1"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="4" Grid.Column="1"/>
+        <TextBox x:Name="ThirdDay1"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,10,5" Grid.Row="7" Grid.Column="1"/>
+        <TextBox x:Name="SecondDay2"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="4" Grid.Column="2"/>
+        <TextBox x:Name="SecondDay3"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="4" Grid.Column="3"/>
+        <TextBox x:Name="SecondDay4"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="4" Grid.Column="4"/>
+        <TextBox x:Name="SecondDay5"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="4" Grid.Column="5"/>
+        <TextBox x:Name="SecondDay6"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="4" Grid.Column="6"/>
+        <TextBox x:Name="ThirdDay2"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="7" Grid.Column="2"/>
+        <TextBox x:Name="ThirdDay3"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="7" Grid.Column="3"/>
+        <TextBox x:Name="ThirdDay4"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="7" Grid.Column="4"/>
+        <TextBox x:Name="ThirdDay5"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="7" Grid.Column="5"/>
+        <TextBox x:Name="ThirdDay6"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,0,9,5" Grid.Row="7" Grid.Column="6"/>
+        <Label FontFamily="Helvetica"
+              x:Name="FirstDayFirstExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+            Margin="0,32,0,0" Grid.Column="1"/>
+        <Label FontFamily="Helvetica"
+            x:Name="FirstDaySecondExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="2"/>
+        <Label FontFamily="Helvetica"
+            x:Name="FirstDayThirdExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="3"/>
+        <Label FontFamily="Helvetica"
+            x:Name="FirstDayFourthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="4"/>
+        <Label FontFamily="Helvetica"
+            x:Name="FirstDayFifthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="5"/>
+        <Label FontFamily="Helvetica"
+            x:Name="FirstDaySixthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="6"/>
+        <Label FontFamily="Helvetica"
+               x:Name="SecondDayFirstExercise"
+            FontWeight="Light"
+            FontSize="20"
+
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+            Margin="0,32,0,0" Grid.Column="1" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+            x:Name="SecondDaySecondExercise"
+            FontWeight="Light"
+            FontSize="20"
+
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+            Margin="0,32,0,0" Grid.Column="2" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+            x:Name="SecondDayThirdExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+            Margin="0,32,0,0" Grid.Column="3" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+            x:Name="SecondDayFourthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="4" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+               x:Name="SecondDayFifthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="5" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+               x:Name="SecondDaySixthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="6" Grid.Row="3"/>
+        <Label FontFamily="Helvetica"
+               x:Name="ThirdDayFirstExercise"
+            FontWeight="Light"
+            FontSize="20"
+
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+            Margin="0,32,0,0" Grid.Column="1" Grid.Row="6"/>
+        <Label FontFamily="Helvetica"
+            x:Name="ThirdDaySecondExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="2" Grid.Row="6"/>
+        <Label FontFamily="Helvetica"
+            x:Name="ThirdDayThirdExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="3" Grid.Row="6"/>
+        <Label FontFamily="Helvetica"
+               x:Name="ThirdDayFourthExercise"
+            FontWeight="Light"
+            FontSize="20"
+
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+            Margin="0,32,0,0" Grid.Column="4" Grid.Row="6"/>
+        <Label FontFamily="Helvetica"
+               x:Name="ThirdDayFifthExercise"
+            FontWeight="Light"
+            FontSize="20"
+
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+
+
+            Margin="0,32,0,0" Grid.Column="5" Grid.Row="6"/>
+        <Label FontFamily="Helvetica"
+               x:Name="ThirdDaySixthExercise"
+            FontWeight="Light"
+            FontSize="20"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="0,32,0,0" Grid.Column="6" Grid.Row="6"/>
+        <TextBox x:Name="FirstDay2_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            Margin="0,5,10,0" Grid.Row="2" Grid.Column="2"/>
+        <TextBox x:Name="FirstDay1_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,10,0" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="FirstDay3_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,10,0" Grid.Row="2" Grid.Column="3"/>
+        <TextBox x:Name="FirstDay4_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,10,0" Grid.Row="2" Grid.Column="4"/>
+        <TextBox x:Name="FirstDay5_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="1,5,9,0" Grid.Row="2" Grid.Column="5"/>
+        <TextBox x:Name="FirstDay6_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,10,0" Grid.Row="2" Grid.Column="6"/>
+        <TextBox x:Name="SecondDay1_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,10,0" Grid.Row="5" Grid.Column="1"/>
+        <TextBox x:Name="SecondDay2_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="5" Grid.Column="2"/>
+        <TextBox x:Name="SecondDay3_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="5" Grid.Column="3"/>
+        <TextBox x:Name="SecondDay4_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="5" Grid.Column="4"/>
+        <TextBox x:Name="SecondDay5_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="4,5,5,0" Grid.Row="5" Grid.Column="5"/>
+        <TextBox x:Name="SecondDay6_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="5" Grid.Column="6"/>
+        <TextBox x:Name="ThirdDay1_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,10,0" Grid.Row="8" Grid.Column="1"/>
+        <TextBox x:Name="ThirdDay2_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="8" Grid.Column="2"/>
+        <TextBox x:Name="ThirdDay3_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="8" Grid.Column="3"/>
+        <TextBox x:Name="ThirdDay4_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="8" Grid.Column="4"/>
+        <TextBox x:Name="ThirdDay5_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="1,5,8,0" Grid.Row="8" Grid.Column="5"/>
+        <TextBox x:Name="ThirdDay6_Copy"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,5,9,0" Grid.Row="8" Grid.Column="6"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Вес"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="2" Margin="0,0,10,0"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Вес"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="5" Margin="0,0,10,0"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Вес"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="8" Margin="0,0,10,0"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Кол-во"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="7" Margin="0,0,10,0"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Кол-во"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="4" Margin="0,0,10,0"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Кол-во"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="1" Margin="0,0,10,0"/>
+        <TextBox x:Name="Pulse"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,24,9,21" Grid.Row="9" Grid.Column="2"/>
+        <TextBox x:Name="Intencity"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,24,10,21" Grid.Row="9" Grid.Column="4"/>
+        <TextBox x:Name="Difficulty_Workout"
+            FontSize="20"
+            Foreground="Red"
+            Background="Black"
+            BorderThickness="0"
+            HorizontalContentAlignment="Left"
+            Margin="0,24,10,21" Grid.Row="9" Grid.Column="6"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Pulse"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="9" Margin="30,19,0,21" Grid.Column="1"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Intencity"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="9" Margin="10,19,0,10" Grid.Column="3"/>
+        <Label FontFamily="Helvetica"
+            FontWeight="Light"
+            Content="Difficult"
+            FontSize="24"
+            Foreground="Black"
+            Background="Transparent"
+            BorderThickness="0" Grid.Row="9" Margin="1,19,0,21" Grid.Column="5"/>
+    </Grid>
+</Window>

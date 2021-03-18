@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KursProject.Client" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAACAAAAAAAAAAAAAAACAAAQABAAAgA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.DataClient" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAABAAAAAAAAAAAAAAAACABAAAAAIAAAACAAgQ=</HashCode>
+      <FileName>DataClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.DataTrainer" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAABAAAAAAIAAAAAAgAICCAAAAEAAAAAAAAAgA=</HashCode>
+      <FileName>DataTrainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.Exercises" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Exercises.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.ExercisesForClient" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAACAEAAAAAAAgAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ExercisesForClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.Group" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABAAEAQ=</HashCode>
+      <FileName>Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.Messages" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAQAAAAAAAAAEAAAAAAAAAAABAAAAAAAgAAA=</HashCode>
+      <FileName>Messages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.ResultExercises" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACJAAAAAAIwQACAAAAAAIAAgAAAAABAAAAAgAAAAA=</HashCode>
+      <FileName>ResultExercises.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.Trainer" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAAAAAAAAAAAAAAAAAACAAAQABAAAgg=</HashCode>
+      <FileName>Trainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.WindowOfViews" Collapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAEAAIAAAAAAAIAIAAAEAAAAAQAAAEAAAgA=</HashCode>
+      <FileName>ViewModels\WindowOfViews.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KursProject.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.EditUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Trainer\EditUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.RegisterTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Trainer\RegisterTrainer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.RegisterUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="System.Windows.Window" ManuallyRouted="true">
+      <Path>
+        <Point X="6.25" Y="1.191" />
+        <Point X="6.25" Y="1.493" />
+        <Point X="13.5" Y="1.493" />
+        <Point X="13.5" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\User\RegisterUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForMainWindow.InputToWorkWindowCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandForMainWindow\InputToWorkWindowCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForMainWindow.RegisterUserOpenCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandForMainWindow\RegisterUserOpenCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.RegisterTrainerOpenCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandForMainWindow\RegisterTrainerOpenCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.AddResultCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForAddResult\AddResultCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.SendMessageToTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForChatUser\SendMessageToTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForEditUser.SendMessageToUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForChatTrainer\SendMessageToUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForEditUser.EditUserForExercises" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForEditUser\EditUserForExercises.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForEditUser.GetExercises" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForEditUser\GetExercises.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForEditUser.EditDataUserCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForEditDataUser\EditUserForExercises.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForEditUser.ReturnDataUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForEditDataUser\ReturnDataUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForGroupTrainer.AddUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForGroupTrainer\AddUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForGroupTrainer.CreateGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForGroupTrainer\CreateGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForRegisterTrainer.RegistrationTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForRegisterTrainer\RegistrationTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.ChatUserCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForWorkTrainerWindow\ChatUserCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.EditUserCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForWorkTrainerWindow\EditUserCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.WorkGroupForTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Trainer\CommandForWorkTrainerWindow\WorkGroupForTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.AddResultCommandOpen" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForWorkUserWindow\AddResultCommandOpen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.ChatWithTrainerCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForWorkUserWindow\ChatWithTrainerCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.CheckMyProgressCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForWorkUserWindow\CheckMyProgressCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.EditDataUserCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForWorkUserWindow\EditDataUserCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForWorkTrainerWindow.WorkGroupWithTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForWorkUserWindow\WorkGroupWithTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Commands.CommandForRegisterUser.RegistrationUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABACAAQAAEAEAABAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\User\CommandForRegisterUser\RegistrationUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.MainWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAIAAEAABAAgIAAABAAAgAAAAAACAAAQAAAAEAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.ChatTrainerViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEgCAAAQAAAAIAgACICAgAAAEAAAAAAAAQABAgA=</HashCode>
+      <FileName>ViewModels\Trainer\ChatTrainerViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.EditUserViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAQAAEgAAAAAAAAAIAAAAKAAgAACAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ViewModels\Trainer\EditUserViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.RegisterTrainerViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACkgABAIAAAAIIAAAAAgAoCAAAAAGAQAQAAAAACA=</HashCode>
+      <FileName>ViewModels\Trainer\RegisterTrainerViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.WorkTrainerGroupViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAEgAQAAAAAAAIAAECKAAgAAAAAAAAAAAgAABAAA=</HashCode>
+      <FileName>ViewModels\Trainer\WorkTrainerGroupViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.WorkTrainerWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAEgAAAAAAAAAIAAACIAAgAEAQFAACAAAAAAEAAA=</HashCode>
+      <FileName>ViewModels\Trainer\WorkTrainerWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.AddResultViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAEgAIAAAAAAAIAAAAAAAgAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ViewModels\User\AddResultViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.ChatUserViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAUgCAAAQAAAAIAgACACAgAAAEAAAAAAABQAAAgA=</HashCode>
+      <FileName>ViewModels\User\ChatUserViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.EditDataUserViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAABIAAAAAAAgAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\User\EditDataUserViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.RegisterUserViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAEgABAQAAAAAIAQAAAAEgCAAAAACAAARAAAAAAA=</HashCode>
+      <FileName>ViewModels\User\RegisterUserViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.ViewModels.WorkUserWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAEgAAAQAIAAAYAAEAAAAgQAAAABgQAAABCCAgAA=</HashCode>
+      <FileName>ViewModels\User\WorkUserWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.ChatTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Trainer\ChatTrainer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.GroupTrainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Trainer\GroupTrainer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.WorkTrainerWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Trainer\WorkTrainerWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.AddResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\User\AddResult.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.213" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.ChatUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\User\ChatUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.EditDataUser" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\User\EditDataUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KursProject.Views.WorkUserWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\User\WorkUserWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

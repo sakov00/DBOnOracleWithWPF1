@@ -1,0 +1,109 @@
+﻿<Window x:Class="KursProject.MainWindow"
+        x:Name="lol"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursProject"
+        xmlns:VM="clr-namespace:KursProject.ViewModels"
+        xmlns:viewmodels="clr-namespace:KursProject.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400"
+        Background="Transparent">
+    <Window.Resources>
+        <viewmodels:MainWindowViewModel x:Key="MainWindowViewModel"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource MainWindowViewModel}"/>
+    </Window.DataContext>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#000000" Offset="0.0"/>
+                        <GradientStop Color="#FF0000" Offset="0.5"/>
+                        <GradientStop Color="#DAA520" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Are you ready?"
+                           FontWeight="Light"
+                           FontFamily="helvetica"
+                           FontSize="22"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="Login"
+                        FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Text="{Binding Login}"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="73,0,0,0"/>
+
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="10,20,0,0">
+                    <TextBox x:Name="Password"
+                        FontFamily="Helvetica"
+                             FontWeight="Light"
+                             Text="{Binding Password}"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="235"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="63,0,0,0"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                    <Button Width="110" Height="40" Content="REGISTER USERS" Command="{Binding Register_Users_Click}" Margin="20,0,0,0"/>
+                    <Button Width="110" Height="40" Content="INPUT" Margin="10,0,10,0" Command="{Binding Input_Click}" CommandParameter="{Binding Object}"/>
+                    <Button Width="110" Height="40" Content="REGISTER TRAINER" Command="{Binding Register_Trainer_Click}"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
+
+
+
+
+        </Grid>
+    </Grid>
+</Window>
